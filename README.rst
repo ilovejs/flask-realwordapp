@@ -15,6 +15,7 @@ pip install -U -r requirements/dev.txt
 
 git config --global -l
 git config --global credential.helper 'cache --timeout=3600'
+ssh-add ~/.ssh/id_rsa
 ```
 
 CircleCI build:
