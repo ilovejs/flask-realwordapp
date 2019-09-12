@@ -11,6 +11,7 @@ origin  https://github.com/andela/flask-realworld-example-app (push)
 git remote remove origin
 git remote add origin git@github.com:ilovejs/flask-realwordapp.git
 git push -u origin master
+pip install -U -r requirements/dev.txt
 ```
 
 CircleCI build:
