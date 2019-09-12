@@ -12,6 +12,9 @@ git remote remove origin
 git remote add origin git@github.com:ilovejs/flask-realwordapp.git
 git push -u origin master
 pip install -U -r requirements/dev.txt
+
+git config --global -l
+git config --global credential.helper 'cache --timeout=3600'
 ```
 
 CircleCI build:
