@@ -7,9 +7,9 @@ from flask_jwt import _default_jwt_encode_handler
 from conduit.database import Column, Model, SurrogatePK, db
 from conduit.extensions import bcrypt
 
-
+# nullable – default of True, indicates the column will be rendered as allowing NULL, 
+# else it’s rendered as NOT NULL. 
 class User(SurrogatePK, Model):
-
     __tablename__ = 'users'
     username = Column(db.String(80), unique=True, nullable=False)
     email = Column(db.String(100), unique=True, nullable=False)

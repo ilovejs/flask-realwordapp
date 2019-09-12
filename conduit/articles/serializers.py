@@ -22,10 +22,12 @@ class ArticleSchema(Schema):
     favoritesCount = fields.Int(dump_only=True)
     favorited = fields.Bool(dump_only=True)
 
+    # Register a method to invoke before deserializing an object.
     @pre_load
     def make_article(self, data):
         return data['article']
 
+    # Register a method to invoke after serializing an object.
     @post_dump
     def dump_article(self, data):
         data['author'] = data['author']['profile']
