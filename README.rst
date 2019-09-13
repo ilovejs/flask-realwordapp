@@ -3,14 +3,13 @@
 Quickstart
 ----------
 
-Origin repo:
+Origin repo::
 
     origin  https://github.com/andela/flask-realworld-example-app (fetch)
+    
     origin  https://github.com/andela/flask-realworld-example-app (push)
 
-Code to get start:
-
-.. highlight:: bash
+.. code-block:: bash
 
     git remote remove origin
     git remote add origin git@github.com:ilovejs/flask-realwordapp.git
@@ -20,15 +19,6 @@ Code to get start:
     git config --global -l
     git config --global credential.helper 'cache --timeout=3600'
     ssh-add ~/.ssh/id_rsa
-
-.. code-block:: python
-   :emphasize-lines: 3,5
-
-   def some_function():
-       interesting = False
-       print 'This line is highlighted.'
-       print 'This one is not...'
-       print '...but this one is.'
        
 CircleCI build:
 
@@ -36,13 +26,11 @@ CircleCI build:
 
 
 First, set your app's secret key as an environment variable. For example,
-add the following to ``.bashrc`` or ``.bash_profile``.
+add the following to ``.bashrc`` or ``.bash_profile``. ::
 
-export CONDUIT_SECRET='11223344' 
+    export CONDUIT_SECRET='11223344' 
 
-Patch '/usr/local/bin/flask'
-
-
+    Patch python version in: '/usr/local/bin/flask'
 
 .. code-block:: bash
 
