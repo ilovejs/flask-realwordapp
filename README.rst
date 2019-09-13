@@ -3,21 +3,33 @@
 Quickstart
 ----------
 
-Origin code:
-```
-origin  https://github.com/andela/flask-realworld-example-app (fetch)
-origin  https://github.com/andela/flask-realworld-example-app (push)
+Origin repo:
 
-git remote remove origin
-git remote add origin git@github.com:ilovejs/flask-realwordapp.git
-git push -u origin master
-pip install -U -r requirements/dev.txt
+    origin  https://github.com/andela/flask-realworld-example-app (fetch)
+    origin  https://github.com/andela/flask-realworld-example-app (push)
 
-git config --global -l
-git config --global credential.helper 'cache --timeout=3600'
-ssh-add ~/.ssh/id_rsa
-```
+Code to get start:
 
+.. highlight:: bash
+
+    git remote remove origin
+    git remote add origin git@github.com:ilovejs/flask-realwordapp.git
+    git push -u origin master
+    pip install -U -r requirements/dev.txt
+
+    git config --global -l
+    git config --global credential.helper 'cache --timeout=3600'
+    ssh-add ~/.ssh/id_rsa
+
+.. code-block:: python
+   :emphasize-lines: 3,5
+
+   def some_function():
+       interesting = False
+       print 'This line is highlighted.'
+       print 'This one is not...'
+       print '...but this one is.'
+       
 CircleCI build:
 
 .. image:: https://circleci.com/gh/gothinkster/flask-realworld-example-app.png
